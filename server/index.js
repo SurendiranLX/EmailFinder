@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
 const { getAuthUrl, getTokens, checkEmailStatus, oauth2Client } = require('./gmailClient');
 
 // app.get('/api/auth/url', (req, res) => {
-app.get('/', (req, res) => {
+app.get('/api/auth/url', (req, res) => {
     const url = getAuthUrl();
     res.json({ url });
 });
