@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5000;
 
 const allowedOrigins = [
     'http://localhost:5173',
-    'https://email-finder-d51q5ezg6-surendiran87s-projects.vercel.app',
+    'https://email-finder-eta.vercel.app/',
     process.env.CLIENT_URL // Add your Vercel URL in Render environment variables
 ];
 
