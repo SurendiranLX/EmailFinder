@@ -118,6 +118,13 @@ function App() {
     }
   };
 
+  const logout = () => {
+    localStorage.removeItem('gmail_tokens');
+    setTokens(null);
+    setIsAuthenticated(false);
+    setEmails([]); // Clear data on logout
+  };
+
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-indigo-100">
       {/* Header */}
@@ -134,10 +141,13 @@ function App() {
 
           <div className="flex items-center gap-4">
             {isAuthenticated ? (
-              <div className="flex items-center gap-2 px-3 py-1.5 bg-green-50 text-green-700 rounded-full border border-green-200 text-sm font-medium">
+              <button
+                onClick={logout}
+                className="px-4 py-2 bg-red-50 border border-red-200 rounded-lg text-sm font-medium text-red-700 hover:bg-red-100 flex items-center gap-2 transition-all hover:shadow-sm"
+              >
                 <ShieldCheck size={16} />
-                <span>Authenticated</span>
-              </div>
+                Logout
+              </button>
             ) : (
               <button
                 onClick={login}
