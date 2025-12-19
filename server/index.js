@@ -33,7 +33,8 @@ app.get('/', (req, res) => {
 // Auth Route placeholders
 const { getAuthUrl, getTokens, checkEmailStatus, oauth2Client } = require('./gmailClient');
 
-app.get('/api/auth/url', (req, res) => {
+// app.get('/api/auth/url', (req, res) => {
+app.get('/', (req, res) => {
     const url = getAuthUrl();
     res.json({ url });
 });
