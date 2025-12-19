@@ -5,7 +5,9 @@ import StatusTable from './components/StatusTable';
 import { parseExcel } from './utils/excelParser';
 import { Mail, ShieldCheck, Loader2 } from 'lucide-react';
 
-const API_URL = import.meta.env.PROD ? '/api' : 'http://localhost:5001/api';
+const API_URL = import.meta.env.PROD
+  ? 'https://emailfinder-jssg.onrender.com/api'
+  : 'http://localhost:5001/api';
 
 function App() {
   const [emails, setEmails] = useState([]);
